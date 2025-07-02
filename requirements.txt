@@ -1,2 +1,14 @@
 scrapy
 pandas
+scrapy-playwright
+fake_useragent
+bs4
+selenium
+webdriver-manager
+undetected-chromedriver
+beautifulsoup4 
+langdetect
+scrapy-user-agents 
+scrapy-rotating-proxies
+scrapy-playwright
+playwright install
