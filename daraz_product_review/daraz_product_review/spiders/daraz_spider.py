@@ -10,7 +10,7 @@ from datetime import datetime
 class DarazDetailedSpider(scrapy.Spider):
     name = 'daraz'
     allowed_domains = ['daraz.com.np']
-    start_urls = ['https://www.daraz.com.np/catalog/?q=smartphone']
+    start_urls = ['https://www.daraz.com.np/catalog/?q=bed%20frame']
 
     def __init__(self):
         super().__init__()
@@ -62,7 +62,7 @@ class DarazDetailedSpider(scrapy.Spider):
         },
         'PLAYWRIGHT_BROWSER_TYPE': 'chromium',
         'PLAYWRIGHT_LAUNCH_OPTIONS': {
-            'headless': False,
+            'headless': True,
             'args': [
                 '--disable-blink-features=AutomationControlled',
                 '--disable-dev-shm-usage',
@@ -84,8 +84,8 @@ class DarazDetailedSpider(scrapy.Spider):
         'ROBOTSTXT_OBEY': False,
         'DOWNLOAD_DELAY': 2,  # Increased delay to avoid blocking
         'RANDOMIZE_DOWNLOAD_DELAY': True,
-        'CONCURRENT_REQUESTS': 4,
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 4,
+        'CONCURRENT_REQUESTS': 8,
+        'CONCURRENT_REQUESTS_PER_DOMAIN': 8,
         'RETRY_TIMES': 3,  # Increased retry attempts
         'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429, 403, 404],
         'LOG_LEVEL': 'INFO',
