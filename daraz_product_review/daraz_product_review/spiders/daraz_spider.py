@@ -10,8 +10,8 @@ from datetime import datetime
 class DarazDetailedSpider(scrapy.Spider):
     name = 'daraz'
     allowed_domains = ['daraz.com.np']
-    #bathroom
-    start_urls = ['https://www.daraz.com.np/catalog/?q=chairs']
+    #bathroom,AC,oven,
+    start_urls = ['https://www.daraz.com.np/catalog/?q=oven']
 
     def __init__(self):
         super().__init__()
